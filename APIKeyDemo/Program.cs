@@ -55,7 +55,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-/*
+
 app.MapGet("weathermini", () =>
 {
     return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -77,5 +77,5 @@ app.MapGet("weathermini2", () =>
     })
             .ToArray();
 }).AddEndpointFilter<ApiKeyEndpointFilterCustomObjectResult>();
-*/
+
 app.Run();
