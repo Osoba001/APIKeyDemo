@@ -11,7 +11,7 @@ builder.Services.AddControllers(/*x=> x.Filters.Add<ApiKeyAuthFilter>()*/);
 builder.Services.AddScoped<ApiKeyAuthFilter>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(/*c =>
+builder.Services.AddSwaggerGen(c =>
 {
     c.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
     {
@@ -37,7 +37,7 @@ builder.Services.AddSwaggerGen(/*c =>
     };
 
     c.AddSecurityRequirement(requirement);
-}*/);
+});
 
 var app = builder.Build();
 
